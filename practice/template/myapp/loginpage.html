@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'myapp/base.html'%}
+{% load static %}
+{% block body-block %}
+<div class="container">
+  <div class="jumbotron">
+
+
+
+    <form  action="{% url 'myapp:loginpage'%}" method="post">
+      {% csrf_token%}
+        <label for="username">ENTER YOU NAME</label>
+        <input type="text" name="username"  placeholder="enter ">
+
+        <label for="password">ENTER YOU password</label>
+        <input type="password" name="password" placeholder="enter ">
+
+
+
+    <input type="submit" class='btn btn-primary'  name="" value="Login">
+        </form>
+          </div>
+  </div>
+
+{% endblock %}
